@@ -1,0 +1,34 @@
+&CONTROL
+    calculation = 'relax'
+    prefix = "N2"
+    pseudo_dir = "./."
+    outdir = "./."
+    nstep = 50
+/
+&SYSTEM
+    ibrav=0, 
+    celldm(1) =1.0, 
+    nat=2, 
+    ntyp=1,
+    ecutwfc=20.000
+    occupations="smearing"
+    degauss=0.05
+/
+&ELECTRONS
+   conv_thr = 1.D-7,
+   mixing_mode = "local-TF"
+/
+&IONS
+/
+ATOMIC_SPECIES
+ N 14.007 N.pbe-n-kjpaw_psl.0.1.UPF
+ATOMIC_POSITIONS angstrom
+ N 7.44 7.5 9.23205
+ N 6.56 7.5 9.23205
+K_POINTS gamma
+
+CELL_PARAMETERS angstrom
+ 15 0 0
+ 0 15 0
+ 0 0  15
+ 
